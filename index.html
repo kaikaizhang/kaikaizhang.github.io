@@ -390,6 +390,60 @@
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity 700ms cubic-bezier(.2,.7,.2,1), transform 800ms cubic-bezier(.2,.7,.2,1); }
     .reveal.visible { opacity: 1; transform: none; }
 
+
+
+
+    /* =========================================================
+   LAPTOP / SHORT DESKTOP
+   Keep the large-desktop composition unchanged,
+   but compact the hero on shorter screens.
+   ========================================================= */
+@media (min-width: 941px) and (max-height: 920px) {
+
+  .hero-content {
+    padding-top: 112px;
+    padding-bottom: 52px;
+    gap: 30px;
+  }
+
+  .hero-copy-wrap {
+    transform: translateY(-150px);
+  }
+
+  h1 {
+    font-size: clamp(72px, 7vw, 100px);
+    line-height: .88;
+  }
+
+  .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .hero-copy {
+    max-width: 610px;
+    margin-top: 22px;
+    font-size: clamp(17px, 1.35vw, 20px);
+    line-height: 1.6;
+  }
+
+  .hero-note {
+    margin-top: 12px;
+  }
+
+  .actions {
+    margin-top: 26px;
+  }
+
+  .button {
+    min-height: 44px;
+    padding: 0 18px;
+  }
+}
+
+
+
+    
+
     footer { padding: 34px 30px 42px; text-align: center; color: rgba(245,246,241,.36); background: var(--bg-deeper); font-size: 10px; line-height: 1.7; }
 
     @media (max-width: 940px) {
